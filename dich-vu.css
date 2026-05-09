@@ -1,0 +1,403 @@
+/* ============================================
+   TRANG DỊCH VỤ — BẾP NHÀ MÌNH
+   CSS bổ sung — kế thừa từ landing.css
+   ============================================ */
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   HERO TRANG DỊCH VỤ
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.service-hero {
+    padding: 140px 0 80px;
+    background: var(--color-bg-warm);
+    text-align: center;
+}
+
+.service-hero-container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.service-hero-title {
+    font-size: clamp(32px, 5vw, 50px);
+    font-weight: 700;
+    color: var(--color-black);
+    line-height: 1.15;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+}
+
+.service-hero-text {
+    font-size: 17px;
+    color: var(--color-text-light);
+    line-height: 1.8;
+    margin-bottom: 32px;
+}
+
+.service-hero-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   TỪNG DỊCH VỤ — LAYOUT 2 CỘT
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.service-section {
+    padding: var(--space-section) 0;
+    background: var(--color-white);
+    border-top: 1px solid var(--color-border);
+}
+
+.service-section-alt {
+    background: var(--color-bg);
+}
+
+.service-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* 2 cột: ảnh + nội dung */
+.service-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 64px;
+    align-items: start;
+}
+
+/* Layout ngược: nội dung trái, ảnh phải */
+.service-layout-reverse {
+    direction: rtl;
+}
+.service-layout-reverse > * {
+    direction: ltr;
+}
+
+/* --- Ảnh --- */
+.service-image-placeholder {
+    background: linear-gradient(145deg, #EDE7E0, #E5DDD5);
+    aspect-ratio: 4/3;
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 40px;
+    color: var(--color-text-light);
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    position: sticky;
+    top: 100px;
+}
+.service-image-placeholder p { font-size: 13px; }
+.service-image-placeholder small { font-size: 11px; opacity: 0.5; }
+
+/* --- Số thứ tự --- */
+.service-number {
+    display: inline-block;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--color-border);
+    line-height: 1;
+    margin-bottom: 8px;
+    letter-spacing: -2px;
+}
+
+/* --- Tag --- */
+.service-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--color-gold);
+    margin-bottom: 16px;
+}
+
+/* --- Tiêu đề dịch vụ --- */
+.service-title {
+    font-size: clamp(26px, 3.5vw, 36px);
+    font-weight: 700;
+    color: var(--color-black);
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+/* --- Subtitle (câu hook) --- */
+.service-subtitle {
+    font-size: 17px;
+    color: var(--color-text);
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    padding-left: 16px;
+    border-left: 3px solid var(--color-gold);
+}
+
+/* --- Mô tả --- */
+.service-desc {
+    font-size: 15px;
+    color: var(--color-text-light);
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+/* --- Đối tượng phù hợp --- */
+.service-for {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 24px;
+    margin-bottom: 28px;
+}
+
+.service-for-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-black);
+    letter-spacing: 0.3px;
+    margin-bottom: 12px;
+}
+
+.service-for-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.service-for-list li {
+    font-size: 14px;
+    color: var(--color-text);
+    line-height: 1.5;
+    padding-left: 4px;
+}
+
+/* --- 4 lợi ích then chốt --- */
+.service-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+.service-benefit {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 16px;
+    border-radius: var(--radius);
+    transition: var(--transition);
+}
+.service-benefit:hover {
+    background: var(--color-bg-warm);
+}
+
+.service-benefit-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.service-benefit strong {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-black);
+    margin-bottom: 4px;
+}
+
+.service-benefit p {
+    font-size: 14px;
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+/* --- CTA dịch vụ --- */
+.service-cta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding-top: 24px;
+    border-top: 1px solid var(--color-border);
+}
+
+.service-cta-note {
+    font-size: 13px;
+    color: var(--color-text-light);
+}
+
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   BẢNG SO SÁNH
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.compare {
+    padding: var(--space-section) 0;
+    background: var(--color-bg-warm);
+    border-top: 1px solid var(--color-border);
+}
+
+.compare-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.compare-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    min-width: 600px;
+}
+
+.compare-table th,
+.compare-table td {
+    padding: 16px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.compare-table th {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-black);
+    background: var(--color-white);
+    padding: 20px;
+}
+
+.compare-table td {
+    color: var(--color-text);
+    background: var(--color-white);
+}
+
+.compare-label {
+    text-align: left !important;
+    font-weight: 600;
+    color: var(--color-black) !important;
+    font-size: 13px;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+/* Cột highlight */
+.compare-highlight {
+    background: var(--color-gold-light) !important;
+    position: relative;
+}
+
+.compare-table thead .compare-highlight {
+    color: var(--color-gold-dark);
+}
+
+.compare-table tbody tr:last-child td {
+    border-bottom: none;
+    padding-top: 20px;
+}
+
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   CTA CUỐI TRANG
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.service-final-cta {
+    padding: var(--space-section) 0;
+    background: var(--color-black);
+    color: #fff;
+    text-align: center;
+}
+
+.service-final-cta-container {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.service-final-cta-title {
+    font-size: clamp(26px, 4vw, 38px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    margin-bottom: 16px;
+}
+
+.service-final-cta-text {
+    font-size: 16px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
+.service-final-cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.service-final-cta .button-primary {
+    background: var(--color-gold);
+    border-color: var(--color-gold);
+}
+.service-final-cta .button-primary:hover {
+    background: var(--color-gold-dark);
+    border-color: var(--color-gold-dark);
+}
+
+.service-final-cta .button-outline {
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+.service-final-cta .button-outline:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.6);
+}
+
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   RESPONSIVE
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+@media (max-width: 1024px) {
+    .service-layout,
+    .service-layout-reverse {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        direction: ltr;
+    }
+
+    .service-image-placeholder {
+        position: static;
+        max-width: 520px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-hero { padding: 110px 0 60px; }
+
+    .service-hero-buttons { flex-direction: column; align-items: center; }
+    .service-hero-buttons .button { width: 100%; max-width: 320px; }
+
+    .service-cta { flex-direction: column; align-items: flex-start; }
+
+    .service-final-cta-buttons { flex-direction: column; align-items: center; }
+    .service-final-cta-buttons .button { width: 100%; max-width: 320px; }
+
+    .compare-table { font-size: 13px; }
+    .compare-table th,
+    .compare-table td { padding: 12px 14px; }
+}
+
+@media (max-width: 480px) {
+    .service-hero-title { font-size: 28px; }
+    .service-title { font-size: 24px; }
+    .service-number { font-size: 36px; }
+}
